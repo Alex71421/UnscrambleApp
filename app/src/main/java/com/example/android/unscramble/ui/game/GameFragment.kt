@@ -21,6 +21,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
 import com.example.android.unscramble.R
 import com.example.android.unscramble.databinding.GameFragmentBinding
 
@@ -32,6 +34,8 @@ class GameFragment : Fragment() {
     private var score = 0
     private var currentWordCount = 0
     private var currentScrambledWord = "test"
+    // associating a ViewModel
+    private val viewModel: GameViewModel by viewModels()
 
 
     // Binding object instance with access to the views in the game_fragment.xml layout
